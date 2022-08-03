@@ -36,13 +36,17 @@
 
 <div class="container">
     <div class="row">
-        <div class="card col-md-3">
-            <img src="https://a-static.mlcdn.com.br/1500x1500/notebook-acer-aspire-5-intel-core-i5-8gb-256gb-ssd-156-full-hd-windows-11-home/magazineluiza/234898600/5fe4fb69dd5c36d1b774743511ad250f.jpg" alt="">
-            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">Item</h5>
-            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <p><strong>Price: </strong>200</p>
-            <button class="btn btn-primary">add to cart</button>
-        </div>
+        <ng-container *ngFor = "let item of productList">
+            <div class="card col-md-3">
+                <img src="{{ item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price: </strong>${{item.price}}</p>
+                <button class="btn btn-primary">add to cart</button>
+            </div>
+
+        </ng-container>
+        
 
     </div>
 </div>
