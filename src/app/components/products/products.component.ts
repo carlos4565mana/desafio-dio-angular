@@ -37,7 +37,8 @@ export class ProductsComponent implements OnInit {
   addtocart(item:any){
     this.cartService.addtoCart(item);
   }
-  
+ 
+
   filter(category:string){
     this.filterCategory = this.productList
     .filter((a:any)=>{
