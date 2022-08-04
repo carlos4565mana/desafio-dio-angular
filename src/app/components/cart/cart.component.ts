@@ -32,10 +32,7 @@ export class CartComponent implements OnInit {
   checkout(){
     this.emptycart()
     this.router.navigate(['products'])
-   
     alert("Successful purchase!!")
-    
-    
   }
   
 
